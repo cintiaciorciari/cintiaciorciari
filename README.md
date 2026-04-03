@@ -1,4 +1,4 @@
-I'm Argentinian ## Hi there 👋
+I'm Argentinian, I like chocolate ## Hi there 👋
 
 <!--
 **cintiaciorciari/cintiaciorciari** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
