@@ -36,6 +36,7 @@ print(not has_ticket) # False
 
 # condiciones 
 #if: se ejecuta si es verdadera
+#else: si ninguna se cumple
 #elif: se ejecuta si la anterior fue falsa
 
 age = int(input("How old are you? "))
@@ -48,6 +49,7 @@ else:
     print("You are a minor.")
 
 
+#elif: se ejecuta si la anterior fue falsa
 
 #Combining Conditions
 
