@@ -37,11 +37,14 @@ print(not has_ticket) # False
 # condiciones 
 #if: se ejecuta si es verdadera
 #else: si ninguna se cumple
+#elif: se ejecuta si la anterior fue falsa
 
 age = int(input("How old are you? "))
 
 if age >= 18:
     print("You are an adult.")
+    
+ #else: si ninguna se cumple   
 else:
     print("You are a minor.")
 
