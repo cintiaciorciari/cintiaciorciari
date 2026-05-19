@@ -1,0 +1,10 @@
+{
+    "python.analysis.autoImportCompletions": true,
+    "python-envs.pythonProjects": [
+        {
+            "path": "week8.py",
+            "envManager": "ms-python.python:venv",
+            "packageManager": "ms-python.python:pip"
+        }
+    ]
+}
