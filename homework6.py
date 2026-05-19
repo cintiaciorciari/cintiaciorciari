@@ -177,8 +177,11 @@ def count_vowels(word):
             count += 1 #suma
 
     return count
+
+
 # 14
-def final_price(price, discount_percent=0):
+
+def final_price(price, discount_percent=0): # =0 valor default
 
     discount_amount = price * discount_percent / 100
 
@@ -191,10 +194,31 @@ def print_deal(item, price, discount=0):
 
     new_price = final_price(price, discount)
 
-    print(f"{item}: €{price} → after {discount}% off: €{new_price}")
+    print(f"{item}: €{price} → after {discount}% off: €{new_price}") #no lo entiendo
 
-    print_deal("Coffee", 16.0, 10)
-    print_deal("Bread", 3.0) 
+  
+print_deal("Coffee", 16.0, 10)
+print_deal("Bread", 3.0)
+
+#15
+def print_stars(n):
+
+    for i in range(1, n + 1): #hace que range llegue hasta n / incluye el ultimo numero 
+        print("* " * i) #repite las estrellas
+
+#16
+
+def count_evens(n):
+
+    count = 0 #crear contador
+
+    for number in range(1, n + 1): #recorre el n, incluye el ultimo 
+
+        if number % 2 == 0: #verifica condicion , si es par
+            count += 1 #se usa para contar cosas,  agrega 1 al contador
+
+    return count #devolver resultado
+
 
 
 
