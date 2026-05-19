@@ -80,7 +80,7 @@ else:
 #shorthand condicionals
 
 
-
+dgvfdgvdfc
   
 
 
