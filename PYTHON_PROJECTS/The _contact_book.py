@@ -188,7 +188,9 @@ country = {
 for key, value in country.items(): #recorre
     print(key, ":", value)
 
+
 #  2/  Update Contact Book (actualizar)
+
 contacts = {
     "Sara": {
         "phone": "12345",
@@ -212,14 +214,25 @@ print(unique_letters("banana"))
 
 
 #creamos sets
-book_a = {"Sara", "Ahmed", "Maria"}
-book_b = {"Ahmed", "John", "Maria"}
+book_a = {
+   "Sara", 
+"Ahmed",
+   "Maria"
+    }
 
+book_b = {
+    "Ahmed",   
+    "John",
+    "Carla" 
+    }
+
+both= book_a & book_b
 # Names in both books
-print(book_a & book_b) #elementos en ambos sets, busca coincidencias
+
+print(both) #elementos en ambos sets, busca coincidencias
 
 # Names only in book_a
-print(book_a - book_b)#elemento solo en book_a
+print(book_a)#elemento solo en book_a
 
 # All names combined
 print(book_a | book_b)#une ambos sets sin repetir
