@@ -1,12 +1,15 @@
+                                  
 #FINAL PROJECT
 #MEDICAL Appoitment system 
 
-import json                       #uso dos modulos, json para validar datos y datetime para validar fechas
+
+
+import json                       #uso dos modulos, json para guardar datos y datetime para validar fechas
 from datetime import datetime
  
-DATE_FORMAT = "%Y-%m-%d %H:%M"
+DATE_FORMAT = "%Y-%m-%d %H:%M"  
 
-try:                             #si el archivo aun no existe,comienza con un diccionario vacio, Load appointments from file
+try:                             #si el archivo aun no existe,comienza con un diccionario vacio
     with open("appointments.json", "r") as file:
         appointments = json.load(file)
 except FileNotFoundError:
@@ -18,7 +21,8 @@ print("1 - Add appointment")
 print("2 - Check a date")
 choice = input("Choose: ")
 
-# ── Option 1: Add appointment( verifica si la fecha ya es una clave en el diccionario. si no, guardala)
+
+# Opcion 1: Agregar un contacto
 
 if choice == "1":
     name  = input("Patient name : ")
@@ -26,14 +30,15 @@ if choice == "1":
     email = input("Email        : ")
     date  = input("Date & time  (YYYY-MM-DD HH:MM) : ")
 
-    # Validate the date format
+    
     try:
-        datetime.strptime(date, DATE_FORMAT) #esto valida que el ususario haya escrito una fecha real,si no el programa se detiene.
+        datetime.strptime(date, DATE_FORMAT) #esto valida que el ususario haya escrito una fecha real
     except ValueError:
         print("Wrong date format!")
         exit()
- 
-    # Check if slot is already taken /comprobar si el espacio ya esta ocupado
+        
+    #comprobar si la fecha ya esta ocupada
+     
     if date in appointments:
         print(f"Sorry, {date} is already booked by {appointments[date]['name']}.")
     else:
@@ -46,7 +51,7 @@ if choice == "1":
             json.dump(appointments, file, indent=4)  #guarda todo de nuevo en el archivo,igual que tu codigo de contactos.
         print(f"Appointment saved for {name} on {date}.")
 
-# ── Option 2: Check a date -verifica que las fechas este en la cita
+# Opcion 2: verifica que las fechas este en la cita
 
 elif choice == "2":
     date = input("Date & time to check (YYYY-MM-DD HH:MM) : ")
